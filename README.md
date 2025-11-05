@@ -22,13 +22,13 @@ the agent will automatically:
 - Return Telex-compatible workflow JSON for agent integration  
 - Beginner-friendly Django REST setup using class-based views  
 
----
-
 ## Tech Stack
 
-- **Backend:** Django + Django REST Framework  
+- **Backend:** `Django` + `Django REST Framework`
 - **Database:** PostgreSQL
 - **Language:** Python 3.12.10
 - **API Type:** RESTful API  
+- **Environment Management:** `.env`
 
+## Postman Documentation
 
