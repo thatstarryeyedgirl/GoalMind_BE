@@ -33,10 +33,11 @@ the agent will automatically:
 ## Endpoints
 | Method | Endpoint | Description |
 |--------|-----------|-------------|
-| `GET` | `/api/agent/` | Returns Telex workflow JSON (agent info) |
-| `POST` | `/api/goal/` | Creates a goal with steps for a user |
+| `GET` | `/a2a/agent/` | Returns Telex workflow JSON (agent info) |
+| `POST` | `/a2a/goal/` | Creates a goal with steps for a user |
 
 
 ## Postman Documentation
 
 - **Postman Link:** ``
+
