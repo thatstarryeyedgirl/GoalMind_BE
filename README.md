@@ -18,7 +18,7 @@ the agent will automatically:
 
 - Create goals with user IDs and messages  
 - Auto-generate 5 random, personalized steps for each goal  
-- Store goals and steps in a PostgreSQL or SQLite database  
+- Store goals and steps in a PostgreSQL database
 - Return Telex-compatible workflow JSON for agent integration  
 - Beginner-friendly Django REST setup using class-based views  
 
