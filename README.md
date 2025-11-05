@@ -30,5 +30,13 @@ the agent will automatically:
 - **API Type:** RESTful API  
 - **Environment Management:** `.env`
 
+## Endpoints
+| Method | Endpoint | Description |
+|--------|-----------|-------------|
+| `GET` | `/api/agent/` | Returns Telex workflow JSON (agent info) |
+| `POST` | `/api/goal/` | Creates a goal with steps for a user |
+
+
 ## Postman Documentation
 
+- **Postman Link:** ``
