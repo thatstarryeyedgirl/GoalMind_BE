@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Goals, GoalSteps
+from .models import Goals, GoalSteps, TelexAgent
 
 class GoalStepsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,4 +20,19 @@ class GoalSerializer(serializers.ModelSerializer):
         return obj.progress()
     
     
+class TelexAgentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TelexAgent
+        fields = [
+            'id',
+            'agent_id',
+            'name',
+            'description',
+            'short_description',
+            'long_description',
+            'category',
+            'active',
+        ]
+        
+
     
