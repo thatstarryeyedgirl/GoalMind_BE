@@ -5,8 +5,6 @@
 This is a simple Django REST API that connects to **Telex.im** as an intelligent goal assistant.  
 The Goal Agent helps users break down their goals into small, achievable steps automatically.
 
----
-
 ## Project Overview
 
 The **Telex Goal Agent** is built to work as a workflow for Telex.  
@@ -15,8 +13,6 @@ the agent will automatically:
 1. Create a goal in the database
 2. Generate 5 random steps to help the user achieve it
 3. Return the goal and steps as a response
-
----
 
 ## Features
 
