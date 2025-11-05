@@ -23,16 +23,7 @@ class GoalSerializer(serializers.ModelSerializer):
 class TelexAgentSerializer(serializers.ModelSerializer):
     class Meta:
         model = TelexAgent
-        fields = [
-            'id',
-            'agent_id',
-            'name',
-            'description',
-            'short_description',
-            'long_description',
-            'category',
-            'active',
-        ]
+        fields = ['agent_id', 'name', 'description', 'short_description', 'long_description', 'category', 'active']
         
 
     
