@@ -8,6 +8,7 @@ class Goals(models.Model):
     goal_description = models.TextField()
     total_steps = models.IntegerField(default=0)
     completed_steps = models.IntegerField(default=0)
+    agent = models.ForeignKey('TelexAgent', on_delete=models.SET_NULL, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -32,13 +33,16 @@ class GoalSteps(models.Model):
     
 class TelexAgent(models.Model):
     name = models.CharField(max_length=100, default="goal_mind")
+    agent_id = models.CharField(max_length=50, unique=True, default="goal_agent_001")
     description = models.TextField(default="A goal assistant that helps users create and track goals.")
     category = models.CharField(max_length=50, default="productivity")
-    active = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
     short_description = models.CharField(max_length=150, default="Breaks goals into actionable steps")
+    long_description = models.TextField(default="I am a helpful goal-setting assistant. My primary function is to help users set and track personal goals by breaking them into achievable steps. Always respond with encouragement and clarity.")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.name} ({'Active' if self.active else 'Inactive'})"    
+        return f"{self.name} ({'Active' if self.active else 'Inactive'})"   
+     
     
     
