@@ -215,3 +215,9 @@ class UserGoalsAPIView(APIView):
             })
         return Response(result)
 
+
+class AllUsersAPIView(APIView):
+    def get(self, request):
+        users = Goals.objects.values_list('telex_user_id', flat=True).distinct()
+        return Response(list(users))
+
