@@ -41,5 +41,5 @@ the agent will automatically:
 The Telex Goal Agent API endpoints are fully documented in Postman to make testing and integration simple. The collection includes all routes for agent configuration and goal creation, along with sample requests and responses.
 
 Each request is preconfigured with the correct HTTP method, headers, and example JSON data — allowing you to quickly test how each endpoint works. You can easily trigger the agent setup, send goal messages, and view the generated goal steps directly within Postman.
-- **Postman Link:** ``
+- **Postman Link:** `https://documenter.getpostman.com/view/48778720/2sB3Wqvg96`
 
