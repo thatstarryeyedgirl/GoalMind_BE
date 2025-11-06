@@ -36,7 +36,7 @@ class TelexAgent(models.Model):
     agent_id = models.CharField(max_length=50, unique=True, default="goal_agent_001")
     description = models.TextField(default="A goal assistant that helps users create and track goals.")
     category = models.CharField(max_length=50, default="productivity")
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(default=False)
     short_description = models.CharField(max_length=150, default="Breaks goals into actionable steps")
     long_description = models.TextField(default="I am a helpful goal-setting assistant. My primary function is to help users set and track personal goals by breaking them into achievable steps. Always respond with encouragement and clarity.")
     created_at = models.DateTimeField(auto_now_add=True)
