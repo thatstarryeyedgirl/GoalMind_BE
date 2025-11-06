@@ -13,16 +13,15 @@ the agent will automatically:
 1. Create a goal in the database
 2. Generate 5 random steps to help the user achieve it
 3. Return the goal and steps as a response
-4. Store goals and steps in database (PostgreSQL)
-5. Prevent duplicate goals for same user/message
 
 ## Features
 
 - Create goals with user IDs and messages  
 - Auto-generate 5 random, personalized steps for each goal  
-- Store goals and steps in a PostgreSQL database
+- Store goals and steps in database (PostgreSQL)
 - Return Telex-compatible workflow JSON for agent integration  
 - Beginner-friendly Django REST setup using class-based views  
+- Prevent duplicate goals for same user/message
 
 ## Tech Stack
 
