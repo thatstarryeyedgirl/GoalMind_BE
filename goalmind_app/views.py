@@ -8,7 +8,6 @@ import json
 
 
 def generate_steps(message):
-    # Extract topic from common patterns
     topic = message.lower()
     if "learn" in topic:
         topic = topic.split("learn")[-1].strip()
@@ -58,12 +57,12 @@ class TelexAgentAPIView(APIView):
             "nodes": [
                 {
                     "id": "goal_node",
-                    "name": "Goal Breakdown Agent",
+                    "name": "Goal Agent",
                     "parameters": {},
                     "position": node_position,
                     "type": "a2a/mastra-a2a-node",
                     "typeVersion": 1,
-                    "url": "http://127.0.0.1:8000/a2a/agent/goal"
+                    "url": "http://127.0.0.1:8000/a2a/agent"
                 }
             ],
             "pinData": {},
