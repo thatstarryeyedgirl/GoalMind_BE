@@ -1,7 +1,7 @@
 from django.db import models
 
-
 # Create your models here.
+
 class Goals(models.Model):
     telex_user_id = models.CharField(max_length=100, db_index=True)
     goal_title = models.CharField(max_length=150)
