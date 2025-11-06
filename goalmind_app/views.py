@@ -4,7 +4,6 @@ from .serializers import GoalSerializer, TelexAgentSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
-import json
 
 
 def generate_steps(message):
@@ -34,7 +33,7 @@ def random_position():
 
 class TelexAgentAPIView(APIView):
     def get(self, request):
-        agent, created = TelexAgent.objects.get_or_create(
+        agent, _ = TelexAgent.objects.get_or_create(
             agent_id="goal_agent_001",
             defaults={
                 "name": "goal_mind",
