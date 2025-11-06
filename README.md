@@ -13,6 +13,8 @@ the agent will automatically:
 1. Create a goal in the database
 2. Generate 5 random steps to help the user achieve it
 3. Return the goal and steps as a response
+4. Store goals and steps in database (PostgreSQL)
+5. Prevent duplicate goals for same user/message
 
 ## Features
 
@@ -33,8 +35,12 @@ the agent will automatically:
 ## Endpoints
 | Method | Endpoint | Description |
 |--------|-----------|-------------|
-| `GET` | `/a2a/agent/` | Returns Telex workflow JSON (agent info) |
-| `POST` | `/a2a/goal/` | Creates a goal with steps for a user |
+| `GET` | / `a2a/agent/` | Returns Telex workflow JSON (agent info) |
+| `POST` | `/a2a/goal/` | Creates a goal with steps OR completes steps via message |
+| `POST` | `/a2acomplete/<step_id>/` | Completes a specific step by ID |
+| `GET` | `/a2a/goals/<user_id>/` | Returns all goals for a specific user |
+| `GET` | `/a2a/users/` | Returns list of all user IDs with goals |
+
 
 
 ## Postman Documentation
