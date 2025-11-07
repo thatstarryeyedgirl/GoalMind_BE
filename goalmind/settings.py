@@ -87,8 +87,7 @@ DATABASES = {
         'PASSWORD': os.environ.get('PGPASSWORD'),
         'HOST': os.environ.get('PGHOST'),
         'POSTGRES_URL': os.environ.get('POSTGRES_URL'),
-        
-}
+        }
 }
 
 # Password validation
