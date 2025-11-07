@@ -17,5 +17,9 @@
   "routes": [
     { "src": "/static/(.*)", "dest": "/staticfiles/$1" },
     { "src": "/(.*)", "dest": "/goalmind/wsgi.py" }
-  ]
+  ],
+  "crons": [{
+    "path": "/api/cron",
+    "schedule": "0 10 * * *"
+  }]
 }
