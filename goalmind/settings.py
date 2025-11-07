@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')=='True'
 
-ALLOWED_HOSTS = ['*', 'goal-mind.vercel.app', '.vercel.app']
+ALLOWED_HOSTS = ['*', 'goal-mind.vercel.app', '.vercel.app', '127.0.0.1']
 
 
 # Application definition
@@ -86,6 +86,7 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),
+        'URL': os.getenv('DATABASE_URL'),
         'OPTIONS': {
             'sslmode': 'require',
         },
