@@ -9,9 +9,9 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 
 import os, sys, traceback
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'goalmind.settings')
 try:
     from django.core.wsgi import get_wsgi_application
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'goalmind.settings')
     application = get_wsgi_application()
 except Exception as e:
     print("ERROR STARTING DJANGO APP:", e)
