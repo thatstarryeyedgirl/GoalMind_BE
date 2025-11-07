@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,9 +27,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')=='True'
 
-ALLOWED_HOSTS = [
-    os.getenv('ALLOWED_HOSTS')
-]
+ALLOWED_HOSTS = ['*', 'goal-mind.vercel.app', '.vercel.app']
 
 
 # Application definition
@@ -90,7 +87,7 @@ DATABASES = {
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),
         'OPTIONS': {
-            'sslmode': os.getenv('sslmode'),
+            'sslmode': 'require',
         },
     }
 }
