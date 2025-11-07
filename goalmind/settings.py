@@ -88,6 +88,7 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT'),
         'OPTIONS': {
             'sslmode': 'require',
+            'channel_binding': 'require',
         },
     }
 }
