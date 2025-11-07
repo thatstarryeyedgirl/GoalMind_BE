@@ -2,15 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "goalmind/wsgi.py",
+      "src": "manage.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      "config": {
+        "maxLambdaSize": "50mb",
+        "runtime": "python3.12"
+      }
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "goalmind/wsgi.py"
+      "dest": "/manage.py"
     }
   ]
 }
