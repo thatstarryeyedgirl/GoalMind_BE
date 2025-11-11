@@ -61,7 +61,7 @@ class TelexAgentAPIView(APIView):
                     "position": node_position,
                     "type": "a2a/mastra-a2a-node",
                     "typeVersion": 1,
-                    "url": "http://127.0.0.1:8000/a2a/agent/goal"
+                    "url": "padimi.pythonanywhere.com/a2a/agent/goal"
                 }
             ],
             "pinData": {},
